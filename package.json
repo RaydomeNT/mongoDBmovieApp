@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BoltonAndrew/m39MongoCLI.git"
+    "url": "https://github.com/RaydomeNT/mongoDBmovieApp.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/BoltonAndrew/m39MongoCLI/issues"
+    "url": "https://github.com/RaydomeNT/mongoDBmovieApp.git"
   },
-  "homepage": "https://github.com/BoltonAndrew/m39MongoCLI#readme",
+  "homepage": "https://github.com/RaydomeNT/mongoDBmovieApp.git",
   "dependencies": {
     "dotenv": "^16.0.1",
     "mongodb": "^4.8.0",
