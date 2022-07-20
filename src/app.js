@@ -6,7 +6,7 @@ const app = async (yargsObj) => {
   const collection = await connection();
   if (yargsObj.create) {
     console.log("C");
-    const newMovie = new Movie(yargsObj.title, yargsObj.actor);
+    const newMovie = new Movie(yargsObj.title, yargsObj.actor, yargsObj.year);
     await newMovie.add(collection);
     //add a movie from the terminal into an object and save in database
   } else if (yargsObj.read) {
