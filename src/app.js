@@ -12,10 +12,20 @@ const app = async (yargsObj) => {
     await newMovie.add(collection);
     //add a movie from the terminal into an object and save in database
 
-  } else if (yargsObj.read) {
-    const movie = new Movie(yargsObj.title, yargsObj.actor, yargsObj.year);
-    console.log(await movie.list(collection));
-    //list items from database
+  } else if (yargsObj.list) {
+    const newMovie = new Movie(yargsObj.title, yargsObj.actor, yargsObj.year);
+    console.log(await newMovie.list(collection));
+    //lists movies with specified actor
+
+  } else if (yargsObj.date) {
+    const newMovie = new Movie(yargsObj.title, yargsObj.actor, yargsObj.year);
+    console.log(await newMovie.date(collection));
+    //lists movies from a specified year
+
+  } else if (yargsObj.search) {
+    const newMovie = new Movie(yargsObj.title, yargsObj.actor, yargsObj.year);
+    console.log(await newMovie.search(collection));
+    //lists a movie from a full specified search
   
   } else if (yargsObj.update) {
     const movie = new Movie(yargsObj.title, yargsObj.actor, yargsObj.year)
@@ -25,6 +35,7 @@ const app = async (yargsObj) => {
   } else if (yargsObj.delete) {
     const movie = new Movie(yargsObj.title);
     console.log(await movie.delete(collection));
+    //First way of deleting
     // const query = { title: yargsObj.title }
     // const result = await collection.deleteOne(query);
     // if (result.deletedCount === 1) {
